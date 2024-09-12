@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Product</title>
+    <link rel="stylesheet" href="subtractForm.css" />
+  </head>
+    <body>
+        <h1>New Product</h1>
+        <hr>
+        <form name="frm">
+            <p class="form-group">
+                <label>
+                    Product Name
+                    <input type="text" name="pname" id="pname">
+                </label>
+                <label>
+                    Quantity
+                    <input type="text" name="qty" id="qty">
+                </label>
+            </p>
+            <p class="form-group">
+                <label>
+                    Unit Price
+                    <input type="text" name="up" id="up">
+                </label>
+                <label>
+                    Discount (%)
+                    <input type="text" name="dc" id="dc">
+                </label>
+            </p>
+            <button type="button" onclick="sellProduct()">Sell</button>
+            <button type="button" onclick="clearForm()">Cancel</button>
+        </form>
+        
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Discount</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    
+    <script src="subtractForm.js"></script>
+  </body>
+</html>
