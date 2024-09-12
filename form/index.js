@@ -7,6 +7,7 @@ function sellProduct() {
     const up = document.getElementById("up").value;
     const dc = document.getElementById("dc").value;
 
+    
     if (!pname || isNaN(qty) || isNaN(up) || isNaN(dc)) {
         alert("Please enter valid values for all fields.");
         return;
