@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .app{
+        width: 500px;
+        border: 1px solid black;
+        padding: 10px
+    }
+    h1{
+        text-align: center;
+    }
+    button{
+        padding:10px 15px;  
+        margin-bottom: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    .product {
+        display: grid;
+        grid-template-columns: 110px 1fr; /* Cột 1 rộng 150px, cột 2 tự điều chỉnh */
+        gap: 10px; /* Khoảng cách giữa các phần tử */
+        align-items: center; /* Căn giữa theo trục dọc */
+        margin-bottom: 10px;
+    }
+    .product input {
+        width: 330px;
+        padding: 10px
+    }
+
+    tr th{
+        padding: 10px 25px;
+        background-color: black;
+        color: white
+    }   
+    #grandTotal{
+        padding-right: -10px;
+        border-top: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        var id = 0;
+        var grandTotal =0;
+        function sell(){
+            id++;
+            var pn = document.getElementById("inputName").value;
+            var pq = document.getElementById("inputQuantity").value;
+            var pp = document.getElementById("inputPrice").value;
+            var total = pq * pp;
+            var row = "<tr>";
+            row += "<td>" + id + "</td>";
+            row += "<td>" +pn + "</td>";
+            row += "<td>" + pq + "</td>";
+            row += "<td>$" +pp + "</td>";
+            row += "<td>$" + total + "</td>";
+            row += "</tr>"; 
+            document.getElementById("product").innerHTML += row;
+
+            grandTotal+=total
+            document.getElementById("grandTotal").innerText = "Total: $" + grandTotal;
+        }
+    </script>
+    <div class="app">
+        <h1>Clothes</h1>
+        <div class="product"><div>Product Name</div> <input type="text" name="inputName" id="inputName"></div>
+        <div class="product"><div>Product Quantity</div> <input type="text" name="inputQuantity" id="inputQuantity"></div>
+        <div class="product"><div>Product Price</div> <input type="text" name="inputPrice"id="inputPrice"></div>
+        <div class="butt"><button onclick="sell()">Add</button></div>
+        <table id="product">
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sub-total</th>
+            </tr>
+         </table>
+        <p id="grandTotal">Total: </p>
+    </div>
+</body>
+</html>
