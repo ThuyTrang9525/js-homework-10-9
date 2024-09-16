@@ -21,3 +21,4 @@ function add(){
     tb.insertBefore(trow, row);
     document.getElementById("total").innerHTML = total ;
 }
+
