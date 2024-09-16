@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Product</title>
-    <link rel="stylesheet" href="sub.css" />
-  </head>
-    <body>
-        <h1>New Product</h1>
-        <hr>
-        <form name="frm">
-            <p class="form-group">
-                <label>
-                    Product Name
-                    <input type="text" name="pname" id="pname">
-                </label>
-                <label>
-                    Quantity
-                    <input type="text" name="qty" id="qty">
-                </label>
-            </p>
-            <p class="form-group">
-                <label>
-                    Unit Price
-                    <input type="text" name="up" id="up">
-                </label>
-                <label>
-                    Discount (%)
-                    <input type="text" name="dc" id="dc">
-                </label>
-            </p>
-            <button type="button" onclick="sellProduct()">Sell</button>
-            <button type="button" onclick="clearForm()">Cancel</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New product</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <label for="" >
+                Product Name
+                <input type="text" id="pname">
+            </label>
+            <label for="">
+                Product Quantity
+                <input type="text" id="qty">
+            </label>
+            <label for="">
+                Product Price
+                <input type="text" id="pp">
+            </label>
+            <button type="button" onclick="add()">Add</button>
         </form>
-        
-        <table id="productTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Product Name</th>
-                    <th>Quantity</th>
-                    <th>Unit Price</th>
-                    <th>Discount</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
+        <table class="p-table" id="p-table">
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sub-total</th>
+            </tr>
+            <tr id="r-total">
+                <td colspan="4">Total </td>
+                <td id="total"></td>
+            </tr>
         </table>
-    
-    <script src="sub.js"></script>
-  </body>
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>
