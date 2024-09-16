@@ -10,13 +10,13 @@ form {
     margin-bottom: 15px;
 }
 .form-group label {
-    width: 150px; /* Fixed label width for uniform alignment */
+    width: 150px; 
 }
 
 .form-group input {
     padding: 8px;
-    width: 200px; /* Set input width for consistent sizing */
-    margin-right: 20px; /* Spacing between input fields */
+    width: 200px; 
+    margin-right: 20px; 
 }
 button {
     padding: 8px 15px;
